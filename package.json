@@ -1,0 +1,18 @@
+{
+  "name": "chat-app",
+  "scripts": {
+    "dev": "nodemon .",
+    "build": "rm -rf dist/ && npx parcel build public/* --dist-dir dist",
+    "start": "NODE_ENV=production node ."
+  },
+  "author": "joojdev",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "socket.io": "^4.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16",
+    "parcel": "^2.5.0"
+  }
+}

@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  color: #333;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #333;
+}
+
+#container {
+  max-width: 400px;
+  max-height: 500px;
+  width: 50vw;
+  height: 85vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 40px 1fr 80px 20px;
+  grid-template-areas:
+    "TI"
+    "CC"
+    "IC"
+    "FC";
+}
+
+#footerContainer {
+  grid-area: FC;
+  background:  rgb(255, 78, 78);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+a, #userCounter {
+  color: white;
+  font-style: italic;
+}
+
+#title {
+  grid-area: TI;
+  background: rgb(255, 78, 78);
+  text-align: center;
+}
+  
+#chatContainer {
+  overflow-y: scroll;
+  grid-area: CC;
+  background: rgb(82, 214, 82);
+  padding: 15px;
+}
+
+#messageList {
+  list-style-type: none;
+}
+
+.systemMessage {
+  font-style: italic;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.messageBox {
+  padding: 10px 0;
+}
+
+.username {
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+.message {
+  background: rgb(163, 223, 163);
+  padding: 10px;
+  border-radius: 5px;
+  word-wrap: break-word;
+}
+
+h2 {
+  font-size: 2em;
+  text-align: center;
+}
+
+#registerContainer {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#registerForm {
+  background: rgb(204, 204, 78);
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  gap: 5px;
+}
+
+#usernameInput {
+  padding: 10px 15px;
+  background: rgb(218, 218, 135);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+}
+
+#enterButton {
+  width: 100%;
+  background: rgb(218, 218, 135);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  padding: 8px;
+  cursor: pointer;
+}
+
+#enterButton:hover {
+  background: rgb(206, 206, 123);
+}
+
+#inputContainer {
+  grid-area: IC;
+  background: rgb(100, 100, 231);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#sendButton {
+  padding: 10px;
+  background: rgb(171, 171, 230);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+#sendButton:hover {
+  background: rgb(102, 102, 141);
+}
+
+#messageInput {
+  width: 85%;
+  padding: 10px 15px;
+  background: rgb(171, 171, 230);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+}
+
+@media only screen and (max-width: 650px) {
+  #container {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+  }
+}
