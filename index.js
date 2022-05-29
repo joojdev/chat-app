@@ -58,14 +58,14 @@ websocketServer.on('connection', (websocketClient) => {
 
   websocketClient.on('disconnect', () => {
     console.log(`A user disconnected! ID: ${websocketClient.id}`)
-    console.log(userArray)
-
+    
     const userIndex = userArray.findIndex((user) => user.id == websocketClient.id)
     if (userIndex == -1) return
     const { username, room } = userArray[userIndex]
     websocketServer.to(room).emit('userRemoved', { username })
-
+    
     userArray.splice(userIndex, 1)
+    console.log(userArray)
   })
 })
 

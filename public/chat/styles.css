@@ -50,6 +50,10 @@ a, #userCounter {
   grid-area: TI;
   background: rgb(255, 78, 78);
   text-align: center;
+  font-size: 1.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
   
 #chatContainer {
@@ -91,6 +95,8 @@ a, #userCounter {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  gap: 15px;
+  padding: 0 10px;
 }
 
 #sendButton {
@@ -107,12 +113,12 @@ a, #userCounter {
 }
 
 #messageInput {
-  width: 85%;
   padding: 10px 15px;
   background: rgb(171, 171, 230);
   border: none;
   border-radius: 5px;
   font-size: 1.2em;
+  width: 100%;
 }
 
 @media only screen and (max-width: 650px) {

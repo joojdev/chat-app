@@ -12,7 +12,7 @@ async function updateUserCounter() {
   const response = await fetch(`/api/user_counter/${sessionStorage.room}`)
   const data = await response.json()
 
-  userCounter.textContent = `${data.online} users online!`
+  userCounter.textContent = `${data.online} users online in this room!`
 }
 
 function start() {
@@ -47,8 +47,7 @@ function sendSystemMessage(message) {
 
 websocketClient.on('userAdded', ({ username }) => {
   if (!connected) return window.location.href = '/'
-  console.log(username)
-  
+ 
   sendSystemMessage(`${username} entered the chat!`)
   updateUserCounter()
 })
