@@ -4,61 +4,40 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chat App</title>
+  <title>Register</title>
   <!-- javascript -->
   <script src="./main.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.0/socket.io.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
   <!-- css -->
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <div id="registerContainer">
-    <form id="registerForm">
-      <h2>Register</h2>
+  <form id="registerForm">
+    <h1>Register</h1>
 
-      <div class="formGroup">
-        <input
-          type="text"
-          id="usernameInput"
-          autocomplete="off"
-          required
-          placeholder="Your username goes here!"
-          maxlength="30"
-        >
-      </div>
-      <button type="submit" id="enterButton">Enter</button>
-    </form>
-  </div>
-
-  <div id="container">
-    <h1 id="title">Chat App</h1>
-
-    <div id="chatContainer">
-      <ul id="messageList">
-        <li class="systemMessage">Welcome to the Chat App!</li>
-        <li class="systemMessage">Trust nothing and no one you see here.</li>
-        <li class="systemMessage" style="margin-bottom: 10px;">You've been warned!</li>
-      </ul>
+    <div class="formGroup">
+      <label for="usernameInput">Username:</label>
+      <input
+        type="text"
+        id="usernameInput"
+        autocomplete="off"
+        required
+        maxlength="30"
+      >
     </div>
 
-    <form id="inputContainer">
-      <div id="formGroup">
-        <input
-          type="text"
-          id="messageInput"
-          autocomplete="off"
-          required
-          placeholder="Your message goes here!"
-          maxlength="150"
-        >
-      </div>
-      <button type="submit" id="sendButton">Send</button>
-    </form>
-
-    <div id="footerContainer">
-      <p id="userCounter">Loading...</p>
-      <a href="https://github.com/joojdev/" target="_blank" rel="external">joojdev</a>
+    <div class="formGroup">
+      <label for="roomInput">Room:</label>
+      <input
+        type="text"
+        id="roomInput"
+        autocomplete="off"
+        required
+        maxlength="15"
+      >
     </div>
-  </div>
+
+    <button type="submit" id="enterButton">Enter</button>
+  </form>
 </body>
 </html>

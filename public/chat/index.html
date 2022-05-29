@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat App</title>
+  <!-- javascript -->
+  <script src="./main.js" defer></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <!-- css -->
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div id="container">
+    <h1 id="title">Chat App</h1>
+
+    <div id="chatContainer">
+      <ul id="messageList">
+        <li class="systemMessage">Welcome to the Chat App!</li>
+        <li class="systemMessage">Trust nothing and no one you see here.</li>
+        <li class="systemMessage" style="margin-bottom: 10px;">You've been warned!</li>
+      </ul>
+    </div>
+
+    <form id="inputContainer">
+      <div id="formGroup">
+        <input
+          type="text"
+          id="messageInput"
+          autocomplete="off"
+          required
+          placeholder="Your message goes here!"
+          maxlength="150"
+        >
+      </div>
+      <button type="submit" id="sendButton">Send</button>
+    </form>
+
+    <div id="footerContainer">
+      <p id="userCounter">Loading...</p>
+      <a href="https://github.com/joojdev/" target="_blank" rel="external">joojdev</a>
+    </div>
+  </div>
+</body>
+</html>
