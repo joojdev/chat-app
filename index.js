@@ -10,7 +10,6 @@ const websocketServer = ws(httpServer)
 let folder = 'public'
 let userArray = []
 
-if (process.env.NODE_ENV == 'production') folder = 'dist'
 expressApp.use(express.static(path.join(__dirname, folder)))
 
 expressApp.get('/api/user_counter', (request, response) => {
