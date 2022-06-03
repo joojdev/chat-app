@@ -51,6 +51,8 @@ websocketServer.on('connection', (websocketClient) => {
   })
 
   websocketClient.on('messageAdd', ({ message }) => {
+    if (!message || message.length > 150) return
+    
     const { username, room } = userArray.find((user) => user.id == websocketClient.id)
 
     websocketServer.to(room).emit('messageAdded', { username, message })
